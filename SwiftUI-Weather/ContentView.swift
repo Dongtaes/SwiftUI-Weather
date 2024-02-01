@@ -4,9 +4,9 @@
 //
 //  Created by Dongtaes on 15.01.2024.
 //
-/* TODO: Get realtime data and change accordingly
-   TODO: Create enums for the weather symbols and can toggle between Fahrenheit and Celcius
-   TODO: Add another cities
+/* TODO: Create enums for the weather symbols and can toggle between Fahrenheit and Celcius
+   TODO: Add another cities / implemented how to fetch the data for other cities, need to add toggling between cities
+   TODO: Add other metrics like wind, maxTemp, minTemp, and clickable days.
 */
 import SwiftUI
 import OpenMeteoSdk
@@ -112,6 +112,10 @@ struct WeatherDayView: View {
                 .font(.system(size: 30, weight: .medium))
                 .foregroundColor(.white)
         }
+        .contentShape(Rectangle())
+        .onTapGesture {
+          print("The whole VStack is tappable now!")
+        }
     }
 }
 
@@ -160,6 +164,10 @@ struct MainWeatherStatus: View{
                 .foregroundColor(.white)
         }
         .padding(.bottom, 40)
+        .contentShape(Rectangle())
+        .onTapGesture {
+          print("The whole VStack is tappable now!")
+        }
     }
 }
 
